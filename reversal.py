@@ -17,5 +17,5 @@ def rev_words(s):
             print("my_words {}".format(words))
         i += 1
         print("last:{}".format(i))
-#    print( " ".join(reversed(words)))
+        print( " ".join(reversed(words)))
 rev_words("I am the best")
