@@ -7,7 +7,7 @@ servername = input('name : ')
 db = sqlite3.connect('servers.db')
 db.row_factory = sqlite3.Row
 cursor = db.cursor()
-cursor.execute("SELECT * from serverinfo where name = '%s'" % servername)
+cursor.execute("SELECT * from serverinfo where name like '%{}%'".format(servername))
 for row in cursor:
    aliasname = str(row['name']) 
    ip = str(row['ipaddr'])
