@@ -23,12 +23,8 @@ try:
          password = pass_word
          command = your_command
          s.login (ip, username, password)
-        # s.sendline ('uptime')  # run a command
-        # s.prompt()             # match the prompt
-        # print s.before         # print everything before the prompt.
          s.sendline (command)
          s.prompt()
-         #init_string = s.before.replace("\r\n", "")
          init_string = s.before
          print(init_string.decode('utf-8'))
          s.logout()

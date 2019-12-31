@@ -2,6 +2,7 @@
 
 def unique(l):
     unique_list = set(l)
+    print(unique_list)
     if len(l) == len(unique_list):
         print("Elements are unique")
     else:
